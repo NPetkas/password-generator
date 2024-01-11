@@ -18,7 +18,6 @@ if (userPass < 8 || userPass > 128) {
   return 'Please Try Again';
 }
 
-
 // local variable criteria and prompt
  var lowercase = confirm("Use lowercase letters?");
  var uppercase = confirm("Use uppercase letters?");
@@ -37,16 +36,16 @@ if (userPass < 8 || userPass > 128) {
  // 'if true' condition that combines global string variables using assignment operators
  if (lowercase) {
   possibleValues += lowercaseAlpha;
- }
+}
  if (uppercase) {
   possibleValues += uppercaseAlpha;
- }
+}
  if (numbers) {
   possibleValues += numberValue;
- }
+}
  if (special) {
   possibleValues += specialSymb;
- }
+}
 
  // 'if false' condition that omits a global string variable using assignment operators
  if (lowercase = false) {
@@ -54,13 +53,13 @@ if (userPass < 8 || userPass > 128) {
 }
  if (uppercase = false) {
   possibleValues -= uppercaseAlpha;
- }
+}
  if (numbers = false) {
   possibleValues -= numberValue;
- }
+}
  if (special = false) {
   possibleValues -= specialSymb;
- }
+}
 
 
  // 'for' loop which iterates through new variable string with respect to userPass selection
@@ -68,7 +67,7 @@ if (userPass < 8 || userPass > 128) {
  for (var i = 0; i < userPass; i++) {
   var generate = [Math.floor(Math.random() * possibleValues.length)];
   password += possibleValues[generate];
- }
+}
 
 // randomly generated password output
 return password;
@@ -80,7 +79,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
