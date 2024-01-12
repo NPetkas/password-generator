@@ -24,16 +24,16 @@ if (userPass < 8 || userPass > 128) {
  var numbers = confirm("Use numbers letters?");
  var special = confirm("Use special characters letters?");
 
- // 'if false' condition to validate the use of either a numeric or special character value 
+// 'if false' condition to validate the use of either a numeric or special character value 
  if (numbers === false && special === false) {
-  alert("Your passwords does not meet the criteria. Must have a numerical or special character value");
+  alert("Your password does not meet the criteria. Must have a numerical or special character value");
   return 'Please Try Again';
 } 
 
 // empty string variable to store concatenated global values
  var possibleValues = "";
 
- // 'if true' condition that combines global string variables using assignment operators
+// 'if true' condition that combines global string variables using assignment operators
  if (lowercase) {
   possibleValues += lowercaseAlpha;
 }
@@ -47,7 +47,7 @@ if (userPass < 8 || userPass > 128) {
   possibleValues += specialSymb;
 }
 
- // 'if false' condition that omits a global string variable using assignment operators
+// 'if false' condition that omits a global string variable using assignment operators
  if (lowercase = false) {
   possibleValues -= lowercaseAlpha;
 }
@@ -61,8 +61,7 @@ if (userPass < 8 || userPass > 128) {
   possibleValues -= specialSymb;
 }
 
-
- // 'for' loop which iterates through new variable string with respect to userPass selection
+// 'for' loop which iterates through new variable string with respect to userPass selection
  var password = "";
  for (var i = 0; i < userPass; i++) {
   var generate = [Math.floor(Math.random() * possibleValues.length)];
